@@ -1,0 +1,86 @@
+body {
+  background: #1e1e1e;
+  color: white;
+  font-family: Arial;
+}
+
+.container {
+  width: 700px;
+  margin: auto;
+}
+
+.upload {
+  margin-bottom: 10px;
+}
+
+.chat {
+  height: 500px;
+  overflow: auto;
+  border: 1px solid #444;
+  padding: 20px;
+  background: #2b2b2b;
+  border-radius: 10px;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.user {
+  background: #2563eb;
+  margin-left: auto;
+  text-align: right;
+}
+
+.assistant {
+  background: #3a3a3a;
+}
+
+.inputBox {
+  display: flex;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #888;
+}
+
+.hljs {
+  background: #f6f8fa;
+  padding: 10px;
+  border-radius: 6px;
+  color: black;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background: black;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
