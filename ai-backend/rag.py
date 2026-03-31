@@ -5,12 +5,17 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 
 def build_db(file_path):
 
+    import shutil, os
+
+    if os.path.exists("./chroma_db"):
+        shutil.rmtree("./chroma_db")
+
     loader = PyPDFLoader(file_path)
     docs = loader.load()
 
     splitter = CharacterTextSplitter(
-        chunk_size=500,
-        chunk_overlap=50
+        chunk_size=800,
+        chunk_overlap=150
     )
 
     split_docs = splitter.split_documents(docs)
